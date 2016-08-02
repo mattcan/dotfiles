@@ -1,0 +1,19 @@
+# vim: set ft=sh
+
+# Start SSH Agent, if not started, and add my SSH key
+SSHAGENT=/usr/bin/ssh-agent
+SSHAGENTARGS="-s"
+if [ -z "$SSH_AUTH_SOCK" -a -x "$SSHAGENT" ]; then
+    eval `$SSHAGENT $SSHAGENTARGS`
+    ssh-add
+    trap "kill $SSH_AGENT_PID" 0
+fi
+
+# Access nodejs in cygwin
+alias npm="/cygdrive/c/Program\ Files/nodejs/npm.cmd"
+alias node="/cygdrive/c/Program\ Files/nodejs/node.exe"
+
+# Update apt-cyg
+if test `find "/cygdrive/c/Users/t852125/Downloads/http%3a%2f%2fcygwin.mirror.constant.com%2f/setup.ini" -mmin +4320` ; then
+    apt-cyg update
+fi
