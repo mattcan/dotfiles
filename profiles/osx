@@ -4,3 +4,5 @@ git config --global merge.tool vimdiff
 git config --global gpg.program gpg2
 
 alias gpg=gpg2
+
+export PATH=$PATH:~/bin
