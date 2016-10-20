@@ -1,6 +1,6 @@
 # vim: set ft=sh:
 
-git config --global merge.tool vimdiff
+git config --global merge.tool kdiff3
 git config --global gpg.program gpg2
 
 alias gpg=gpg2
