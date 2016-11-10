@@ -40,6 +40,7 @@ set backspace=indent,eol,start
 "" filetype specific whitespace
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd Filetype php setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd BufWritePre *.php :%s/\s\+$//e
 autocmd Filetype markdown setlocal tabstop=2 shiftwidth=2 softtabstop=0 noexpandtab tw=80
 autocmd Filetype html setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
