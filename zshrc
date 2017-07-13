@@ -16,7 +16,7 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow python)
+plugins=(git python)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -29,6 +29,17 @@ alias rzsh=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 # Gitignore.io
 function gi() {
     curl -L -s https://www.gitignore.io/api/$@ ;
+}
+
+# Find the longest TLD in existance
+# Pass in `long` to get the longest
+function tld-len() {
+    # can use wc -L  in place of everything from awk onwards if you're on GNU
+    if [ "$1" = "long" ] ; then
+        curl -s http://data.iana.org/TLD/tlds-alpha-by-domain.txt | tail -n+2 | awk '{print length, $0}' | sort -nr | head -1
+    else
+        curl -s http://data.iana.org/TLD/tlds-alpha-by-domain.txt | tail -n+2 | awk '{print length, $0}' | sort -n | head -1
+    fi
 }
 
 # Download and unpack latest wordpress into current directory
