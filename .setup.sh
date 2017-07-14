@@ -35,6 +35,19 @@ linkdotfiles() {
     done
 }
 
+linkCustomTheme() {
+    dir=$WORKING_DIR/omz/themes
+    custom=$WORKING_DIR/oh-my-zsh/custom/themes
+    theme=wezm++.zsh-theme
+
+    echo "Linking wezm++ (hardcoded name)"
+    if [ -d "$custom/$theme" ] ; then
+        exit
+    fi
+
+    ln -s $dir/$theme $custom/$theme
+}
+
 setprofile() {
     echo "\n######### PROFILE #########"
     prompt="Select a profile:"
@@ -69,11 +82,13 @@ select choice in "${setupopts[@]}"; do
     case $choice in
         "All")
             linkdotfiles
+            linkCustomTheme
             cd $WORKING_DIR
             setprofile
             ;;
         "Dotfiles without profile")
             linkdotfiles
+            linkCustomTheme
             ;;
         "Profile only")
             setprofile
