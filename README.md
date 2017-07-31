@@ -16,3 +16,9 @@ All my dot files and such
 * **zshrc** - Your `.zshrc` file.
 * **profiles/** - Machine specific startup or public commands and routines. Good
 	place to start `ssh-agent` or set machine specific aliases.
+
+## adding vim plugins
+
+1. Start in the root of this project
+1. Do this: `git submodule add https://github.com/the/plugin
+	 vim/bundle/pluginName`
