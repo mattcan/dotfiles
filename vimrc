@@ -75,6 +75,10 @@ let g:indent_guides_auto_colors = 0
 au FileType yaml autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=10
 au FileType yaml autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=11
 
+"" NERDTree settings
+autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 "" Disable background color erase
 if &term =~ '256color'
     set t_ut=
