@@ -22,3 +22,17 @@ All my dot files and such
 1. Start in the root of this project
 1. Do this: `git submodule add https://github.com/the/plugin
 	 vim/bundle/pluginName`
+
+## git things I always forget
+
+* **cloned without recursive or pulling in new submodule**
+
+	```sh
+	git submodule update --init
+	```
+
+* **updating to latest commit for all submodules**
+
+	```sh
+	git submodule update --recursive --remote
+	```
