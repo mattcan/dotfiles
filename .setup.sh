@@ -72,7 +72,7 @@ setprofile() {
 ### Setup Menu
 echo "######## SETUP ########"
 prompt="Select setup option:"
-setupopts=( 'All' 'Dotfiles without profile' 'Profile only' 'Quit')
+setupopts=( 'All' 'Dotfiles without profile' 'Profile only' 'Custom oh-my-zsh' 'Quit')
 
 PS3="$prompt "
 
@@ -92,6 +92,9 @@ select choice in "${setupopts[@]}"; do
             ;;
         "Profile only")
             setprofile
+            ;;
+        "Custom oh-my-zsh")
+            linkCustomTheme
             ;;
         "Quit")
             echo "Quitter."
