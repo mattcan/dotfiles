@@ -78,6 +78,15 @@ au FileType yaml autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=11
 "" NERDTree settings
 autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+silent! map <F3> :NERDTreeFind<CR>
+
+"" CtrlP settings
+let g:ctrlp_user_command = {
+    \ 'types': {
+        \ 1: ['.git', 'cd %s && git ls-files --cached --exclude-standard --others']
+        \ },
+    \ 'fallback': 'find %s -type f'
+    \ }
 
 "" Disable background color erase
 if &term =~ '256color'
