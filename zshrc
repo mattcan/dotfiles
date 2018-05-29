@@ -24,7 +24,11 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR="vim"
 
 # custom aliases
-alias rzsh=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+function rzsh() {
+    source ~/.zshrc
+    source ~/.zprofile
+    echo 'ZSH config reloaded from ~/.zshrc'
+}
 
 # Gitignore.io
 function gi() {
@@ -46,6 +50,13 @@ function tld-len() {
 function wp-latest() {
     wget wordpress.org/latest.tar.gz
     tar -xzf latest.tar.gz
+}
+
+function create-note() {
+    DATE=`date '+%Y%m%d'`
+    FILENAME=${DATE}_log.md
+    echo "# $DATE\n" > $FILENAME
+    vim $FILENAME
 }
 
 # Include customizations if there are any
