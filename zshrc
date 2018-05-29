@@ -55,7 +55,9 @@ function wp-latest() {
 function create-note() {
     DATE=`date '+%Y%m%d'`
     FILENAME=${DATE}_log.md
-    echo "# $DATE\n" > $FILENAME
+
+    if [ ! -f "$FILENAME" ]; then echo "# $DATE\n" > $FILENAME; fi
+
     vim $FILENAME
 }
 
