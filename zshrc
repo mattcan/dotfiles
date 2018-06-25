@@ -11,7 +11,7 @@ export TERM=xterm-256color
 ZSH_THEME="wezm++"
 
 # Comment this out to disable bi-weekly auto-update checks
-DISABLE_AUTO_UPDATE="true"
+#DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -30,36 +30,10 @@ function rzsh() {
     echo 'ZSH config reloaded from ~/.zshrc'
 }
 
-# Gitignore.io
-function gi() {
-    curl -L -s https://www.gitignore.io/api/$@ ;
-}
-
-# Find the longest TLD in existance
-# Pass in `long` to get the longest
-function tld-len() {
-    # can use wc -L  in place of everything from awk onwards if you're on GNU
-    if [ "$1" = "long" ] ; then
-        curl -s http://data.iana.org/TLD/tlds-alpha-by-domain.txt | tail -n+2 | awk '{print length, $0}' | sort -nr | head -1
-    else
-        curl -s http://data.iana.org/TLD/tlds-alpha-by-domain.txt | tail -n+2 | awk '{print length, $0}' | sort -n | head -1
-    fi
-}
-
-# Download and unpack latest wordpress into current directory
-function wp-latest() {
-    wget wordpress.org/latest.tar.gz
-    tar -xzf latest.tar.gz
-}
-
-function create-note() {
-    DATE=`date '+%Y%m%d'`
-    FILENAME=${DATE}_log.md
-
-    if [ ! -f "$FILENAME" ]; then echo "# $DATE\n" > $FILENAME; fi
-
-    vim $FILENAME
-}
+# Include functions
+if [ -f $HOME/dotfiles/zshfunc ]; then
+    source $HOME/dotfiles/zshfunc
+fi
 
 # Include customizations if there are any
 if [ -f $HOME/.thispc ]; then
