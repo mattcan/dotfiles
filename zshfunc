@@ -32,3 +32,24 @@ function create-note() {
 
     vim $FILENAME
 }
+
+# Self-study notes
+function self-study() {
+    YESTERDAY=`date -v -1d "+%Y%m%d"`
+    YESTFILE=${YESTERDAY}_self.md
+
+    TODAY=`date "+%Y%m%d"`
+    TODAYFILE=${TODAY}_self.md
+
+    if [ ! -f "$TODAYFILE" ] ; then
+        echo "# $DATE\n" > $TODAYFILE;
+    fi
+
+    if [ ! -f "$YESTFILE" ] ; then
+        echo "Your journey begins\n" >> $TODAYFILE
+        vim $TODAYFILE
+        return 0
+    fi
+
+    vim -O $YESTFILE $TODAYFILE
+}
