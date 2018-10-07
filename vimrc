@@ -13,20 +13,11 @@ set showcmd
 filetype plugin indent on
 set colorcolumn=80
 
-"" Cygwin and Vim fix to use a block cursor
-if has("win32unix") || has("win32") || has("win16")
-    let &t_ti.="\e[1 q"
-    let &t_SI.="\e[5 q"
-    let &t_EI.="\e[1 q"
-    let &t_te.="\e[0 q"
-endif
-
 "" syntastic settings
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
-let g:syntastic_php_checkers = ["php", "phpmd"]
 
 "" support for new filetypes
 au BufRead,BufNewFile *.md set filetype=markdown
@@ -39,15 +30,10 @@ set tabstop=4
 set backspace=indent,eol,start
 
 "" filetype specific whitespace
-autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
-autocmd Filetype php setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-autocmd BufWritePre *.php :%s/\s\+$//e
 autocmd Filetype markdown setlocal tabstop=2 shiftwidth=2 softtabstop=0 noexpandtab tw=80
 autocmd Filetype html setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-autocmd Filetype less setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype yaml setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-autocmd Filetype htmldjango.twig setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 "" searching
 set hlsearch
