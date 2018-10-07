@@ -16,6 +16,13 @@ function tld-len() {
     fi
 }
 
+# Kill and remove all docker containers and images
+function docker-reset() {
+    docker kill $(docker ps -a -q)
+    docker rm $(docker ps -a -q)
+    docker rmi $(docker images -q) -f
+}
+
 # Download and unpack latest wordpress into current directory
 function wp-latest() {
     wget wordpress.org/latest.tar.gz
