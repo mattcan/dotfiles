@@ -25,8 +25,8 @@ au BufRead,BufNewFile *.md set filetype=markdown
 "" global whitespace
 set expandtab
 set smarttab
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set backspace=indent,eol,start
 
 "" filetype specific whitespace
