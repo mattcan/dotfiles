@@ -34,3 +34,9 @@
 [submodule "vim/bundle/vim-es6"]
 	path = vim/bundle/vim-es6
 	url = https://github.com/isRuslan/vim-es6.git
+[submodule "vim/bundle/nord-vim"]
+	path = vim/bundle/nord-vim
+	url = https://github.com/arcticicestudio/nord-vim.git
+[submodule "tmux/themes/nord-tmux"]
+	path = tmux/themes/nord-tmux
+	url = https://github.com/arcticicestudio/nord-tmux
