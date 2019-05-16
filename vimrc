@@ -1,7 +1,7 @@
 execute pathogen#infect()
 
 "" Set the colorscheme
-colorscheme solarized
+colorscheme nord
 set background=dark
 
 "" base setup (read: can't figure out where else to place these)
