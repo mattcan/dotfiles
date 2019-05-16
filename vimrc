@@ -25,7 +25,16 @@ au!
 autocmd VimEnter * silent !echo -ne "\e[2 q"
 augroup END
 
+"" C++ projects should have doxygen
+augroup cpp
+  autocmd!
+  autocmd BufRead,BufNewFile *.h,*.cpp set filetype=cpp.doxygen
+augroup END
+
 "" syntastic settings
+let g:syntastic_mode_map = {
+  \ "mode": "active",
+  \ "passive_filetypes": ["cpp"] }
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
@@ -46,6 +55,7 @@ autocmd Filetype markdown setlocal tabstop=2 shiftwidth=2 softtabstop=0 noexpand
 autocmd Filetype html setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype yaml setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype cpp.doxygen setlocal noexpandtab tabstop=2 softtabstop=0
 
 "" searching
 set hlsearch
