@@ -13,6 +13,18 @@ set showcmd
 filetype plugin indent on
 set colorcolumn=80
 
+"" change cursor
+"" normal: block
+"" insert: bar
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
+"" optional reset cursor on start:
+augroup myCmds
+au!
+autocmd VimEnter * silent !echo -ne "\e[2 q"
+augroup END
+
 "" syntastic settings
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
@@ -45,10 +57,10 @@ set smartcase
 let g:airline_powerline_fonts = 1
 
 "" disable cursor keys in normal mode
-map <Left>  :echo "no!"<cr>
-map <Right> :echo "no!"<cr>
-map <Up>    :echo "no!"<cr>
-map <Down>  :echo "no!"<cr>
+map <Left>  :echo "No!"<cr>
+map <Right> :echo "No!"<cr>
+map <Up>    :echo "No!"<cr>
+map <Down>  :echo "No!"<cr>
 
 "" TaskList options
 let g:tlTokenList = ['TODO', '@todo']
