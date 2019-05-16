@@ -12,7 +12,7 @@ linkdotfiles() {
 
     dir=$WORKING_DIR
     olddir=$HOME/dotfiles_old   # old dotfiles backup directory
-    files="vimrc vim oh-my-zsh zshrc thispc tmux.conf"       # list of files/folders to symlink in homedir
+    files="vimrc vim oh-my-zsh zshrc thispc tmux.conf tmux"       # list of files/folders to symlink in homedir
 
     ##########
 
