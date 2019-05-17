@@ -2,7 +2,6 @@ execute pathogen#infect()
 
 "" Set the colorscheme
 colorscheme nord
-set background=dark
 
 "" base setup (read: can't figure out where else to place these)
 set nocompatible
@@ -35,10 +34,17 @@ augroup END
 let g:syntastic_mode_map = {
   \ "mode": "active",
   \ "passive_filetypes": ["cpp"] }
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list=1
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_wq=0
 let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
+""let g:syntastic_javascript_checkers = ['eslint']
+""let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 
 "" support for new filetypes
 au BufRead,BufNewFile *.md set filetype=markdown
@@ -65,6 +71,7 @@ set smartcase
 
 "" Powerline settings
 let g:airline_powerline_fonts = 1
+let g:airline_inactive_collapse=1
 
 "" disable cursor keys in normal mode
 map <Left>  :echo "No!"<cr>

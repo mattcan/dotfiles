@@ -40,3 +40,9 @@
 [submodule "tmux/themes/nord-tmux"]
 	path = tmux/themes/nord-tmux
 	url = https://github.com/arcticicestudio/nord-tmux
+[submodule "vim/bundle/jenkinsfile-vim-syntax"]
+	path = vim/bundle/jenkinsfile-vim-syntax
+	url = https://github.com/martinda/Jenkinsfile-vim-syntax.git
+[submodule "vim/bundle/typescript-vim"]
+	path = vim/bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
