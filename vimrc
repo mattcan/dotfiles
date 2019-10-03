@@ -32,7 +32,7 @@ augroup END
 
 "" syntastic settings
 let g:syntastic_mode_map = {
-  \ "mode": "active",
+  \ "mode": "passive",
   \ "passive_filetypes": ["cpp"] }
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -48,6 +48,7 @@ let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
 
 "" support for new filetypes
 au BufRead,BufNewFile *.md set filetype=markdown
+au! BufNewFile,BufRead *.svelte set ft=html
 
 "" global whitespace
 set expandtab
