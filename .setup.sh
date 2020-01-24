@@ -38,14 +38,16 @@ linkdotfiles() {
 linkCustomTheme() {
     dir=$WORKING_DIR/omz/themes
     custom=$WORKING_DIR/oh-my-zsh/custom/themes
-    theme=wezm++.zsh-theme
+    themes="wezm++.zsh-theme refiner.zsh-theme"
 
     echo "Linking wezm++ (hardcoded name)"
-    if [ -d "$custom/$theme" ] ; then
-        exit
-    fi
+    for theme in $themes; do
+      if [ -d "$custom/$theme" ] ; then
+          exit
+      fi
 
-    ln -s $dir/$theme $custom/$theme
+      ln -s $dir/$theme $custom/$theme
+    done
 }
 
 setprofile() {
