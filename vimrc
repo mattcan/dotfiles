@@ -71,7 +71,11 @@ set ignorecase
 set smartcase
 
 "" Powerline settings
-let g:airline_powerline_fonts = 1
+if &term=~ 'linux'
+  let g:airline_powerline_fonts = 0
+else
+  let g:airline_powerline_fonts = 1
+endif
 let g:airline_inactive_collapse=1
 
 "" disable cursor keys in normal mode
