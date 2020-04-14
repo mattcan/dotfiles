@@ -2,3 +2,4 @@
 *.swp
 thispc
 .netrwhist
+.DS_Store
