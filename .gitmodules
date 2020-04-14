@@ -52,3 +52,6 @@
 [submodule "tmux/plugins/tmux-battery"]
 	path = tmux/plugins/tmux-battery
 	url = https://github.com/tmux-plugins/tmux-battery
+[submodule "powerline-fonts"]
+	path = powerline-fonts
+	url = git@github.com:powerline/fonts.git
