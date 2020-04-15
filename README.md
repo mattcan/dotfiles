@@ -46,3 +46,4 @@ All my dot files and such
 * iterm2
 * Nord theme
 * Docker
+* the_silver_searcher
