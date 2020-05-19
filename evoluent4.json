@@ -1,0 +1,30 @@
+{
+  "title": "Evoluent 4 on OSX 10.15+ forward/back",
+  "rules": [
+    {
+      "description": "Set lower button to back and upper to forward",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "pointing_button": "button6"
+          },
+          "to": {
+            "key_code": "open_bracket",
+            "modifiers": ["left_gui"]
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "pointing_button": "button4"
+          },
+          "to": {
+            "key_code": "close_bracket",
+            "modifiers": ["left_gui"]
+          }
+        }
+      ]
+    }
+  ]
+}
