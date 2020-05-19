@@ -58,11 +58,14 @@ set tabstop=2
 set backspace=indent,eol,start
 
 "" filetype specific whitespace
-autocmd Filetype markdown setlocal tabstop=2 shiftwidth=2 softtabstop=0 noexpandtab tw=80
+autocmd Filetype markdown setlocal tabstop=2 shiftwidth=2 softtabstop=0 expandtab tw=80
 autocmd Filetype html setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype yaml setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype cpp.doxygen setlocal noexpandtab tabstop=2 softtabstop=0
+
+"" filetype specific plugins
+autocmd Filetype markdown vmap <Leader><BSlash> :EasyAlign*<Bar><Enter>
 
 "" searching
 set hlsearch
