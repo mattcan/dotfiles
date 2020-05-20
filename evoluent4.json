@@ -1,5 +1,5 @@
 {
-  "title": "Evoluent 4 on OSX 10.15+ forward/back",
+  "title": "Evoluent VerticalMouse 4 on OSX 10.15+ forward/back",
   "rules": [
     {
       "description": "Set lower button to back and upper to forward",
@@ -18,6 +18,31 @@
           "type": "basic",
           "from": {
             "pointing_button": "button4"
+          },
+          "to": {
+            "key_code": "close_bracket",
+            "modifiers": ["left_gui"]
+          }
+        }
+      ]
+    },
+    {
+      "description": "Set upper button to back and lower to forward",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "pointing_button": "button4"
+          },
+          "to": {
+            "key_code": "open_bracket",
+            "modifiers": ["left_gui"]
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "pointing_button": "button6"
           },
           "to": {
             "key_code": "close_bracket",
