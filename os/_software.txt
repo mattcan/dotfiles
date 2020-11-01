@@ -1,0 +1,9 @@
+brave
+owncloud-client
+rsync
+vim
+git
+wget
+zsh
+curl
+firefox
