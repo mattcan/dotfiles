@@ -11,7 +11,7 @@
 	path = share/vim/vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline.git
 [submodule "oh-my-zsh"]
-	path = vendor/oh-my-zsh
+	path = share/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule "vim/bundle/vim-dispatch"]
 	path = share/vim/vim/bundle/vim-dispatch
