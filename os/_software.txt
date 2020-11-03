@@ -7,3 +7,5 @@ wget
 zsh
 curl
 firefox
+keybase
+keepassxc

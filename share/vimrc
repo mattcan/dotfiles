@@ -11,6 +11,7 @@ set number
 set showcmd
 filetype plugin indent on
 set colorcolumn=80
+set mouse=
 
 "" change cursor
 "" normal: block

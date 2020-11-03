@@ -6,23 +6,20 @@
 
 WORKING_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
 
-linkdotfiles() {
+linkConfig() {
 
-    ########## Variables
+    printf "\n######## LINK CONFIG ########\n"
 
-    dir=$WORKING_DIR
-    olddir=$HOME/dotfiles_old   # old dotfiles backup directory
-    files="vimrc vim oh-my-zsh zshrc thispc tmux.conf tmux"       # list of files/folders to symlink in homedir
-
-    ##########
+    dir=$WORKING_DIR/share
+    olddir=$HOME/dotfiles_old/$(date +"%Y%m%d_%H%M%S")   # old dotfiles backup directory
+    files="$(ls $dir)"       # list of files/folders to symlink in homedir
 
     # create dotfiles_old in homedir
-    echo "Creating $olddir for backup of any existing dotfiles in ~"
+    printf "** Creating $olddir for backup of any existing dotfiles in ~\n"
     mkdir -p $olddir
-    echo "...done"
 
     # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
-    echo "Moving any existing dotfiles from $HOME to $olddir"
+    printf "** Moving any existing dotfiles from $HOME to $olddir\n"
     for file in $files; do
         if [ -e "$HOME/.$file" ] ; then
             mv $HOME/.$file $olddir
@@ -30,19 +27,20 @@ linkdotfiles() {
 	if [ -d "$HOME/.$file" ] ; then
             mv $HOME/.$file $olddir
         fi
-        echo "Creating symlink to $file in home directory."
+        printf "** Creating symlink to $file in home directory.\n"
         ln -s $dir/$file $HOME/.$file
     done
 }
 
 linkCustomTheme() {
+    printf "\n######## LINK ZSH THEMES ########\n"
     dir=$WORKING_DIR/omz/themes
-    custom=$WORKING_DIR/oh-my-zsh/custom/themes
-    themes="wezm++.zsh-theme refiner.zsh-theme"
+    custom=$WORKING_DIR/share/oh-my-zsh/custom/themes
+    themes="$(ls $dir)"
 
-    echo "Linking wezm++ (hardcoded name)"
     for theme in $themes; do
       if [ -d "$custom/$theme" ] ; then
+          printf "** Theme did not exist: $theme\n"
           exit
       fi
 
@@ -50,58 +48,22 @@ linkCustomTheme() {
     done
 }
 
-setprofile() {
-    echo "\n######### PROFILE #########"
-    prompt="Select a profile:"
-    profiles=( $(ls $WORKING_DIR/profiles) )
-
-    PS3="$prompt "
-    select opt in "${profiles[@]}" "Cancel" ; do
-        if (( REPLY == 1 + ${#profiles[@]} )) ; then
-            exit
-
-        elif (( REPLY > 0 && REPLY <= ${#profiles[@]} )) ; then
-            echo "Creating symlink for $opt to $HOME/.zprofile"
-            ln -s -f $WORKING_DIR/profiles/$opt $HOME/.zprofile
-            break
-
-        else
-            echo "Invalid option"
-        fi
-    done
+setProfile() {
+  . "$WORKING_DIR/os/install.sh"
 }
 
 ### Setup Menu
-echo "######## SETUP ########"
-prompt="Select setup option:"
-setupopts=( 'All' 'Dotfiles without profile' 'Profile only' 'Custom oh-my-zsh' 'Quit')
+printf "######## SETUP ########\n"
 
-PS3="$prompt "
+if [ $# -eq 0 ] ; then
+  linkConfig;
+  linkCustomTheme;
+fi
 
-select choice in "${setupopts[@]}"; do
-    [[ -n $choice ]] || { echo "Invalid choice." >&2; continue; }
-
-    case $choice in
-        "All")
-            linkdotfiles
-            linkCustomTheme
-            cd $WORKING_DIR
-            setprofile
-            ;;
-        "Dotfiles without profile")
-            linkdotfiles
-            linkCustomTheme
-            ;;
-        "Profile only")
-            setprofile
-            ;;
-        "Custom oh-my-zsh")
-            linkCustomTheme
-            ;;
-        "Quit")
-            echo "Quitter."
-            exit 0
-    esac
-
-    break
+while getopts ":p:c:t:" arg; do
+  case $arg in
+    p) setProfile;;
+    c) linkConfig;;
+    t) linkCustomTheme;;
+  esac
 done

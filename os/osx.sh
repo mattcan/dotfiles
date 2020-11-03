@@ -1,8 +1,0 @@
-# vim: set ft=sh:
-
-git config --global merge.tool kdiff3
-git config --global gpg.program gpg2
-
-alias gpg=gpg2
-
-export PATH="~/bin":"/usr/local/bin":"/usr/local/opt":$PATH;
