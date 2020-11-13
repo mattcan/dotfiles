@@ -9,3 +9,5 @@ curl
 firefox
 keybase
 keepassxc
+docker
+docker-compose
