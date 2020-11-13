@@ -58,3 +58,6 @@
 [submodule "vim/plugin/vim-easy-align"]
 	path = vim/bundle/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align.git
+[submodule "share/vim/bundle/cosmic_latte"]
+	path = share/vim/bundle/cosmic_latte
+	url = https://github.com/nightsense/cosmic_latte.git
