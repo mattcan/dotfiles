@@ -84,6 +84,9 @@ else
 endif
 let g:airline_inactive_collapse=1
 
+"" Vimwiki settings
+let g:vimwiki_list = [{'path': '/mnt/sharedrive/wiki'}]
+
 "" disable cursor keys in normal mode
 map <Left>  :echo "No!"<cr>
 map <Right> :echo "No!"<cr>
