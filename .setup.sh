@@ -52,18 +52,30 @@ setProfile() {
   . "$WORKING_DIR/os/install.sh"
 }
 
+sendHelp() {
+  printf "Usage: ./.setup <opt>\n"
+  printf "If no option is set, configs and custom themes are linked\n"
+  printf "\n"
+  printf "%s\t%s\n" "-p" "setup profile"
+  printf "%s\t%s\n" "-c" "setup and link configs (anything in share/)"
+  printf "%s\t%s\n" "-t" "link custom zsh themes"
+  printf "%s\t%s\n" "-h" "this screen here"
+}
+
 ### Setup Menu
 printf "######## SETUP ########\n"
 
 if [ $# -eq 0 ] ; then
+  printf "No arguments, linking config and zsh themes"
   linkConfig;
   linkCustomTheme;
 fi
 
-while getopts ":p:c:t:" arg; do
+while getopts ":pcth" arg; do
   case $arg in
     p) setProfile;;
     c) linkConfig;;
     t) linkCustomTheme;;
+    h) sendHelp;;
   esac
 done
