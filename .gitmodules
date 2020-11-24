@@ -61,3 +61,6 @@
 [submodule "share/vim/bundle/cosmic_latte"]
 	path = share/vim/bundle/cosmic_latte
 	url = https://github.com/nightsense/cosmic_latte.git
+[submodule "share/vim/bundle/vimwiki"]
+	path = share/vim/bundle/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git
