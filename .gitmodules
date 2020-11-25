@@ -1,35 +1,35 @@
 [submodule "vim/bundle/vim-sensible"]
-	path = share/vim/vim/bundle/vim-sensible
+	path = share/vim/bundle/vim-sensible/vim-sensible
 	url = https://github.com/tpope/vim-sensible.git
 [submodule "vim/bundle/syntastic"]
-	path = share/vim/vim/bundle/syntastic
+	path = share/vim/bundle/syntastic/syntastic
 	url = https://github.com/scrooloose/syntastic.git
 [submodule "vim/bundle/vim-colors-solarized"]
 	path = share/vim/vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "vim/bundle/vim-airline"]
-	path = share/vim/vim/bundle/vim-airline
+	path = share/vim/bundle/vim-airline/vim-airline
 	url = https://github.com/bling/vim-airline.git
 [submodule "oh-my-zsh"]
 	path = share/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule "vim/bundle/vim-dispatch"]
-	path = share/vim/vim/bundle/vim-dispatch
+	path = share/vim/bundle/vim-dispatch/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
 [submodule "vim/bundle/vim-indent-guides"]
-	path = share/vim/vim/bundle/vim-indent-guides
+	path = share/vim/bundle/vim-indent-guides/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
 [submodule "vim/bundle/editorconfig-vim"]
 	path = share/vim/vim/bundle/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
 [submodule "vim/bundle/nerdtree"]
-	path = share/vim/vim/bundle/nerdtree
+	path = share/vim/bundle/nerdtree/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
 [submodule "vim/bundle/ctrlp.vim"]
-	path = share/vim/vim/bundle/ctrlp.vim
+	path = share/vim/bundle/ctrlp.vim/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
 [submodule "vim/bundle/vim-es6"]
-	path = share/vim/vim/bundle/vim-es6
+	path = share/vim/bundle/vim-es6/vim-es6
 	url = https://github.com/isRuslan/vim-es6.git
 [submodule "tmux/themes/nord-tmux"]
 	path = share/tmux/tmux/themes/nord-tmux
@@ -38,16 +38,16 @@
 	path = share/vim/vim/bundle/jenkinsfile-vim-syntax
 	url = https://github.com/martinda/Jenkinsfile-vim-syntax.git
 [submodule "vim/bundle/typescript-vim"]
-	path = share/vim/vim/bundle/typescript-vim
+	path = share/vim/bundle/typescript-vim/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
 [submodule "vim/bundle/nord-vim"]
-	path = share/vim/vim/bundle/nord-vim
+	path = share/vim/bundle/nord-vim/nord-vim
 	url = https://github.com/arcticicestudio/nord-vim.git
 [submodule "vim/bundle/vim-fugitive"]
-	path = share/vim/vim/bundle/vim-fugitive
+	path = share/vim/bundle/vim-fugitive/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
 [submodule "vim/bundle/ale"]
-	path = share/vim/vim/bundle/ale
+	path = share/vim/bundle/ale/ale
 	url = https://github.com/dense-analysis/ale.git
 [submodule "tmux/plugins/tmux-battery"]
 	path = share/tmux/tmux/plugins/tmux-battery
