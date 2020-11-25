@@ -22,3 +22,15 @@
 [submodule "share/vim/bundle/vimwiki"]
 	path = share/vim/bundle/vimwiki
 	url = https://github.com/vimwiki/vimwiki.git
+[submodule "share/vim/bundle/vim-airline"]
+	path = share/vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "share/vim/bundle/typescript-vim"]
+	path = share/vim/bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "share/vim/bundle/ale"]
+	path = share/vim/bundle/ale
+	url = https://github.com/dense-analysis/ale.git
+[submodule "share/vim/bundle/vim-es6"]
+	path = share/vim/bundle/vim-es6
+	url = https://github.com/isRuslan/vim-es6.git
