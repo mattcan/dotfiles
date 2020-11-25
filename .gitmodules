@@ -26,7 +26,7 @@
 	path = share/vim/bundle/vim-es6/vim-es6
 	url = https://github.com/isRuslan/vim-es6.git
 [submodule "tmux/themes/nord-tmux"]
-	path = share/tmux/themes/nord-tmux/nord-tmux
+	path = share/tmux/backup/themes
 	url = https://github.com/arcticicestudio/nord-tmux
 [submodule "vim/bundle/typescript-vim"]
 	path = share/vim/bundle/typescript-vim/typescript-vim
