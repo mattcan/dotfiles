@@ -10,3 +10,15 @@
 [submodule "powerline-fonts"]
 	path = vendor/powerline-fonts
 	url = git@github.com:powerline/fonts.git
+[submodule "share/vim/bundle/nerdtree"]
+	path = share/vim/bundle/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule "share/vim/bundle/ctrlp.vim"]
+	path = share/vim/bundle/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "share/vim/bundle/cosmic_latte"]
+	path = share/vim/bundle/cosmic_latte
+	url = https://github.com/nightsense/cosmic_latte.git
+[submodule "share/vim/bundle/vimwiki"]
+	path = share/vim/bundle/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git
