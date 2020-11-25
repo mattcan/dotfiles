@@ -4,9 +4,6 @@
 [submodule "vim/bundle/syntastic"]
 	path = share/vim/bundle/syntastic/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "vim/bundle/vim-colors-solarized"]
-	path = share/vim/vim/bundle/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "vim/bundle/vim-airline"]
 	path = share/vim/bundle/vim-airline/vim-airline
 	url = https://github.com/bling/vim-airline.git
@@ -19,9 +16,6 @@
 [submodule "vim/bundle/vim-indent-guides"]
 	path = share/vim/bundle/vim-indent-guides/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
-[submodule "vim/bundle/editorconfig-vim"]
-	path = share/vim/vim/bundle/editorconfig-vim
-	url = https://github.com/editorconfig/editorconfig-vim.git
 [submodule "vim/bundle/nerdtree"]
 	path = share/vim/bundle/nerdtree/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
@@ -34,9 +28,6 @@
 [submodule "tmux/themes/nord-tmux"]
 	path = share/tmux/tmux/themes/nord-tmux
 	url = https://github.com/arcticicestudio/nord-tmux
-[submodule "vim/bundle/jenkinsfile-vim-syntax"]
-	path = share/vim/vim/bundle/jenkinsfile-vim-syntax
-	url = https://github.com/martinda/Jenkinsfile-vim-syntax.git
 [submodule "vim/bundle/typescript-vim"]
 	path = share/vim/bundle/typescript-vim/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
