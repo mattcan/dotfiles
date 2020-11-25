@@ -1,39 +1,9 @@
-[submodule "vim/bundle/vim-airline"]
-	path = share/vim/bundle/vim-airline/vim-airline
-	url = https://github.com/bling/vim-airline.git
 [submodule "oh-my-zsh"]
 	path = share/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
-[submodule "vim/bundle/vim-dispatch"]
-	path = share/vim/bundle/vim-dispatch/vim-dispatch
-	url = https://github.com/tpope/vim-dispatch.git
-[submodule "vim/bundle/vim-indent-guides"]
-	path = share/vim/bundle/vim-indent-guides/vim-indent-guides
-	url = https://github.com/nathanaelkane/vim-indent-guides.git
-[submodule "vim/bundle/nerdtree"]
-	path = share/vim/bundle/nerdtree/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-[submodule "vim/bundle/ctrlp.vim"]
-	path = share/vim/bundle/ctrlp.vim/ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim.git
-[submodule "vim/bundle/vim-es6"]
-	path = share/vim/bundle/vim-es6/vim-es6
-	url = https://github.com/isRuslan/vim-es6.git
 [submodule "tmux/themes/nord-tmux"]
 	path = share/tmux/themes/nord-tmux
 	url = https://github.com/arcticicestudio/nord-tmux
-[submodule "vim/bundle/typescript-vim"]
-	path = share/vim/bundle/typescript-vim/typescript-vim
-	url = https://github.com/leafgarland/typescript-vim.git
-[submodule "vim/bundle/nord-vim"]
-	path = share/vim/bundle/nord-vim/nord-vim
-	url = https://github.com/arcticicestudio/nord-vim.git
-[submodule "vim/bundle/vim-fugitive"]
-	path = share/vim/bundle/vim-fugitive/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule "vim/bundle/ale"]
-	path = share/vim/bundle/ale/ale
-	url = https://github.com/dense-analysis/ale.git
 [submodule "tmux/plugins/tmux-battery"]
 	path = share/tmux/plugins/tmux-battery/tmux-battery
 	url = https://github.com/tmux-plugins/tmux-battery
@@ -43,9 +13,3 @@
 [submodule "vim/plugin/vim-easy-align"]
 	path = vim/bundle/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align.git
-[submodule "share/vim/bundle/cosmic_latte"]
-	path = share/vim/bundle/cosmic_latte
-	url = https://github.com/nightsense/cosmic_latte.git
-[submodule "share/vim/bundle/vimwiki"]
-	path = share/vim/bundle/vimwiki
-	url = https://github.com/vimwiki/vimwiki.git
