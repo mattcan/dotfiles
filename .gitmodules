@@ -1,9 +1,3 @@
-[submodule "vim/bundle/vim-sensible"]
-	path = share/vim/bundle/vim-sensible/vim-sensible
-	url = https://github.com/tpope/vim-sensible.git
-[submodule "vim/bundle/syntastic"]
-	path = share/vim/bundle/syntastic/syntastic
-	url = https://github.com/scrooloose/syntastic.git
 [submodule "vim/bundle/vim-airline"]
 	path = share/vim/bundle/vim-airline/vim-airline
 	url = https://github.com/bling/vim-airline.git
