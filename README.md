@@ -38,14 +38,3 @@ This is the pathogen system:
     ```sh
     git submodule update --recursive --remote
     ```
-
-## things to install
-
-* git
-* curl
-* tmux
-* Ubuntu Mono font
-* iterm2
-* Nord theme
-* Docker
-* the_silver_searcher
