@@ -3,3 +3,6 @@
 # 2. Add any customizations that are unique to this computer
 # 3. ?????
 # 4. Profit
+
+# WIKIPATH is used in .vimrc
+# export WIKIPATH=/mnt/sharedone/wiki

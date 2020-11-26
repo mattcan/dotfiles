@@ -85,7 +85,8 @@ endif
 let g:airline_inactive_collapse=1
 
 "" Vimwiki settings
-let g:vimwiki_list = [{'path': '/mnt/sharedrive/wiki'}]
+let g:vimwiki_list = [{'path': $WIKIPATH}]
+autocmd BufNewFile $WIKIPATH/diary/[0-9]*.wiki :silent 0r !cat $WIKIPATH/diary/template.wiki
 
 "" disable cursor keys in normal mode
 map <Left>  :echo "No!"<cr>
