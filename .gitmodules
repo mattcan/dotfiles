@@ -34,3 +34,6 @@
 [submodule "share/vim/bundle/vim-es6"]
 	path = share/vim/bundle/vim-es6
 	url = https://github.com/isRuslan/vim-es6.git
+[submodule "share/vim/bundle/vim-javascript"]
+	path = share/vim/bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
