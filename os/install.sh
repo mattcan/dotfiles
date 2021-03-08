@@ -11,7 +11,9 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     echo "No /etc/os-release found"
   fi
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  if ! [ -x "$(command -v brew)" ]; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  fi
   xargs brew install < _software.txt
 else
   echo "Unknown OS: $OSTYPE"
