@@ -32,8 +32,8 @@ function rzsh() {
 }
 
 # Include functions
-if [ -f $HOME/dotfiles/zshfunc ]; then
-    source $HOME/dotfiles/zshfunc
+if [ -f $HOME/dotfiles/share/zshfunc ]; then
+    source $HOME/dotfiles/share/zshfunc
 fi
 
 # Include customizations if there are any
