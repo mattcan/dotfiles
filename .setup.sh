@@ -57,7 +57,7 @@ downloadDotfiles() {
 }
 
 bootstrap() {
-  curl https://raw.githubusercontent.com/mattcan/dotfiles/master/os/_software.txt --output _software.txt
+  curl https://raw.githubusercontent.com/mattcan/dotfiles/master/os/_software_work.txt --output _software.txt
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mattcan/dotfiles/master/os/install.sh)"
   
   rm _software.txt
