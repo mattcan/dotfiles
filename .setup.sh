@@ -4,7 +4,7 @@
 # This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
 ############################
 
-WORKING_DIR="dotfiles"
+WORKING_DIR="~/dotfiles"
 
 linkConfig() {
 
@@ -52,8 +52,13 @@ setProfile() {
   . "$WORKING_DIR/os/install.sh"
 }
 
-downloadDotfiles() {
-  git clone "https://github.com/mattcan/dotfiles.git" $WORKING_DIR
+bootstrap() {
+  curl https://raw.githubusercontent.com/mattcan/dotfiles/master/os/_software_work.txt --output _software.txt
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mattcan/dotfiles/master/os/install.sh)"
+  
+  git clone --recursive "https://github.com/mattcan/dotfiles.git" $WORKING_DIR
+  
+  rm _software.txt
 }
 
 sendHelp() {
@@ -71,8 +76,7 @@ printf "######## SETUP ########\n"
 
 if [ $# -eq 0 ] ; then
   printf "No arguments, installing from scratch"
-  downloadDotfiles;
-  setProfile;
+  bootstrap;
   linkConfig;
   linkCustomTheme;
 fi
