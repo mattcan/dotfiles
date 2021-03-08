@@ -27,7 +27,7 @@ export EDITOR="vim"
 # custom aliases
 function rzsh() {
     source ~/.zshrc
-    source ~/.zprofile
+    source ~/.thispc
     echo 'ZSH config reloaded from ~/.zshrc'
 }
 
