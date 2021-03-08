@@ -1,7 +1,9 @@
 execute pathogen#infect()
 
 "" Set the colorscheme
-colorscheme nord
+set background=dark
+colorscheme cosmic_latte
+let g:airline_theme='cosmic_latte_dark'
 
 "" base setup (read: can't figure out where else to place these)
 set nocompatible
@@ -11,6 +13,7 @@ set number
 set showcmd
 filetype plugin indent on
 set colorcolumn=80
+set mouse=
 
 "" change cursor
 "" normal: block
@@ -43,8 +46,7 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_wq=0
 let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
-""let g:syntastic_javascript_checkers = ['eslint']
-""let g:syntastic_javascript_eslint_exe = 'npm run lint --'
+let g:syntastic_javascript_checkers = ['standard']
 
 "" support for new filetypes
 au BufRead,BufNewFile *.md set filetype=markdown
@@ -80,6 +82,10 @@ else
   let g:airline_powerline_fonts = 1
 endif
 let g:airline_inactive_collapse=1
+
+"" Vimwiki settings
+let g:vimwiki_list = [{'path': $WIKIPATH}]
+autocmd BufNewFile $WIKIPATH/diary/[0-9]*.wiki :silent 0r !cat $WIKIPATH/diary/template.wiki
 
 "" disable cursor keys in normal mode
 map <Left>  :echo "No!"<cr>

@@ -1,0 +1,13 @@
+brave
+owncloud-client
+rsync
+vim
+git
+wget
+zsh
+curl
+firefox
+keybase
+keepassxc
+docker
+docker-compose

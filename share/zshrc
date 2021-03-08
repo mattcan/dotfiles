@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 # Get proper terminal colours
-export TERM=screen-256color
+#export TERM=screen-256color
 #export TERM=xterm-256color
 
 # Set name of the theme to load.
@@ -27,13 +27,13 @@ export EDITOR="vim"
 # custom aliases
 function rzsh() {
     source ~/.zshrc
-    source ~/.zprofile
+    source ~/.thispc
     echo 'ZSH config reloaded from ~/.zshrc'
 }
 
 # Include functions
-if [ -f $HOME/dotfiles/zshfunc ]; then
-    source $HOME/dotfiles/zshfunc
+if [ -f $HOME/dotfiles/share/zshfunc ]; then
+    source $HOME/dotfiles/share/zshfunc
 fi
 
 # Include customizations if there are any
