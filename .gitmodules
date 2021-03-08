@@ -9,7 +9,7 @@
 	url = https://github.com/tmux-plugins/tmux-battery
 [submodule "powerline-fonts"]
 	path = vendor/powerline-fonts
-	url = git@github.com:powerline/fonts.git
+	url = https://github.com/powerline/fonts.git
 [submodule "share/vim/bundle/nerdtree"]
 	path = share/vim/bundle/nerdtree
 	url = https://github.com/preservim/nerdtree.git
