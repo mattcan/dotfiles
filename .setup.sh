@@ -4,7 +4,7 @@
 # This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
 ############################
 
-WORKING_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
+WORKING_DIR="dotfiles"
 
 linkConfig() {
 
@@ -52,9 +52,13 @@ setProfile() {
   . "$WORKING_DIR/os/install.sh"
 }
 
+downloadDotfiles() {
+  git clone "https://github.com/mattcan/dotfiles.git" $WORKING_DIR
+}
+
 sendHelp() {
   printf "Usage: ./.setup <opt>\n"
-  printf "If no option is set, configs and custom themes are linked\n"
+  printf "If no option is set, then we do a \"from scratch\" install\n"
   printf "\n"
   printf "%s\t%s\n" "-p" "setup profile"
   printf "%s\t%s\n" "-c" "setup and link configs (anything in share/)"
@@ -66,7 +70,9 @@ sendHelp() {
 printf "######## SETUP ########\n"
 
 if [ $# -eq 0 ] ; then
-  printf "No arguments, linking config and zsh themes"
+  printf "No arguments, installing from scratch"
+  downloadDotfiles;
+  setProfile;
   linkConfig;
   linkCustomTheme;
 fi
