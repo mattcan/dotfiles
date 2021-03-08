@@ -4,7 +4,7 @@
 # This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
 ############################
 
-WORKING_DIR="~/dotfiles"
+WORKING_DIR="$HOME/dotfiles"
 
 linkConfig() {
 
@@ -36,6 +36,7 @@ linkCustomTheme() {
     printf "\n######## LINK ZSH THEMES ########\n"
     dir=$WORKING_DIR/omz/themes
     custom=$WORKING_DIR/share/oh-my-zsh/custom/themes
+    mkdir -p "$custom"
     themes="$(ls $dir)"
 
     for theme in $themes; do
@@ -56,7 +57,9 @@ bootstrap() {
   curl https://raw.githubusercontent.com/mattcan/dotfiles/master/os/_software_work.txt --output _software.txt
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mattcan/dotfiles/master/os/install.sh)"
   
-  git clone --recursive "https://github.com/mattcan/dotfiles.git" $WORKING_DIR
+  git clone --recursive "https://github.com/mattcan/dotfiles.git"
+  mkdir -p "$HOME/Projects"
+  mv "$WORKING_DIR/thispc.tpl" "$WORKING_DIR/share/thispc"
   
   rm _software.txt
 }
