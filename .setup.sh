@@ -56,6 +56,13 @@ downloadDotfiles() {
   git clone "https://github.com/mattcan/dotfiles.git" $WORKING_DIR
 }
 
+bootstrap() {
+  curl https://raw.githubusercontent.com/mattcan/dotfiles/master/os/_software.txt --output _software.txt
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mattcan/dotfiles/master/os/install.sh)"
+  
+  rm _software.txt
+}
+
 sendHelp() {
   printf "Usage: ./.setup <opt>\n"
   printf "If no option is set, then we do a \"from scratch\" install\n"
@@ -71,10 +78,7 @@ printf "######## SETUP ########\n"
 
 if [ $# -eq 0 ] ; then
   printf "No arguments, installing from scratch"
-  downloadDotfiles;
-  setProfile;
-  linkConfig;
-  linkCustomTheme;
+  bootstrap;
 fi
 
 while getopts ":pcth" arg; do
