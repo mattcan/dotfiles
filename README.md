@@ -4,14 +4,16 @@ All my dot files and such
 
 ## installation
 
-1. Clone this directory:
+1. Download setup script:
     ```sh
-    # over HTTPS
-    git clone --recursive https://github.com/mattcan/dotfiles.git
-    # over SSH
-    git clone --recursive https://github.com/mattcan/dotfiles.git
+    cd $HOME
+    curl https://raw.githubusercontent.com/mattcan/dotfiles/master/.setup.sh --output dotfiles.sh
     ```
-1. Run `.setup.sh` to backup any old configurations and install this one
+1. Set execute permission:
+    ```sh
+    chmod +x dotfiles.sh
+    ```
+1. Run script: `./dotfiles.sh`
 
 ## directory structure
 
