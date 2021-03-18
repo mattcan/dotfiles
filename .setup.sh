@@ -7,6 +7,14 @@
 WORKING_DIR="$HOME/dotfiles"
 
 linkConfig() {
+	if ! [ -d "$WORKING_DIR" ] ; then
+		if [ -x "$(command -v git)" ]; then
+			download;
+		else
+			printf "** Why isn't git installed? **\n"
+			exit 1
+		fi
+	fi
 
     printf "\n######## LINK CONFIG ########\n"
 
@@ -33,6 +41,15 @@ linkConfig() {
 }
 
 linkCustomTheme() {
+	if ! [ -d "$WORKING_DIR" ] ; then
+		if [ -x "$(command -v git)" ]; then
+			download;
+		else
+			printf "** Why isn't git installed? **\n"
+			exit 1
+		fi
+	fi
+
     printf "\n######## LINK ZSH THEMES ########\n"
     dir=$WORKING_DIR/omz/themes
     custom=$WORKING_DIR/share/oh-my-zsh/custom/themes
@@ -53,11 +70,15 @@ setProfile() {
   . "$WORKING_DIR/os/install.sh"
 }
 
+download() {
+  git clone --recursive "https://github.com/mattcan/dotfiles.git"
+}
+
 bootstrap() {
   curl https://raw.githubusercontent.com/mattcan/dotfiles/master/os/_software_work.txt --output _software.txt
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mattcan/dotfiles/master/os/install.sh)"
   
-  git clone --recursive "https://github.com/mattcan/dotfiles.git"
+  download;
   mkdir -p "$HOME/Projects"
   mv "$WORKING_DIR/thispc.tpl" "$WORKING_DIR/share/thispc"
   
@@ -65,7 +86,7 @@ bootstrap() {
 }
 
 sendHelp() {
-  printf "Usage: ./.setup <opt>\n"
+  printf "Usage: %s <opt>\n" "$0"
   printf "If no option is set, then we do a \"from scratch\" install\n"
   printf "\n"
   printf "%s\t%s\n" "-p" "setup profile"
