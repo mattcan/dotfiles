@@ -5,4 +5,4 @@
 # 4. Profit
 
 # WIKIPATH is used in .vimrc
-# export WIKIPATH=/mnt/sharedone/wiki
+# export WIKIPATH=/tmp
