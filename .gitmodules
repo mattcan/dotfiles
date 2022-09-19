@@ -37,3 +37,6 @@
 [submodule "share/vim/bundle/vim-javascript"]
 	path = share/vim/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
+[submodule "share/vim/bundle/vim-solidity"]
+	path = share/vim/bundle/vim-solidity
+	url = https://github.com/TovarishFin/vim-solidity.git

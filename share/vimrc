@@ -9,11 +9,14 @@ let g:airline_theme='cosmic_latte_dark'
 set nocompatible
 syntax on
 set encoding=utf-8
-set number
 set showcmd
 filetype plugin indent on
 set colorcolumn=80
 set mouse=
+
+"" line numbering
+set number
+set relativenumber
 
 "" change cursor
 "" normal: block
