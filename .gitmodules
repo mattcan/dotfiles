@@ -40,3 +40,6 @@
 [submodule "share/vim/bundle/vim-solidity"]
 	path = share/vim/bundle/vim-solidity
 	url = https://github.com/TovarishFin/vim-solidity.git
+[submodule "share/vim/bundle/vim-terraform"]
+	path = share/vim/bundle/vim-terraform
+	url = https://github.com/hashivim/vim-terraform.git
